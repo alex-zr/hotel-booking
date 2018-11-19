@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Rooms list</title>
+</head>
+<body>
+    Rooms: ${rooms}
+    <table>
+        <th:block th:each="room : ${rooms}">
+            <tr>
+                <td th:text="${room.getNumber()}">...</td>
+                <td th:text="${room.getCategory()}">...</td>
+            </tr>
+            <tr>
+                <td colspan="2" th:text="${room.getPrice()}">...</td>
+            </tr>
+        </th:block>
+    </table>
+</body>
+</html>
